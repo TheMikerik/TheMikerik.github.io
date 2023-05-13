@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Website Crossroad</title>
-    <link rel="stylesheet" href="main-styles.css">
-    <script>
-      function handleClick(event) {
-        event.preventDefault();
-        var destinationURL = event.target.getAttribute('href');
-        window.location.href = destinationURL;
-      }
-    </script>
-  </head>
-  <body>
-    <div class="logo-name flicker">
-      <img src="TheMikerik-5-12-2023.png" alt="logo" />
-    </div>
-    <div class="container-projects">
-      <h1 class="gradient-text">Just a playgound - testing random shi</h1>
-      <ul>
-        <li class="vibrate">
-          <a href="https://themikerik.github.io/fapi/index.html" onclick="handleClick(event)">Business Form for FAPI</a>
-        </li>
-        <li class="vibrate">
-          <a href="https://themikerik.github.io/test/index.html" onclick="handleClick(event)">Test Website</a>
-        </li>
-      </ul>
-    </div>
-    <div class="container-info" >
-      <h1 class="gradient-text2">About me</h1>
-      <h2 class="gradient-text2">Im studying at VSB FEI</h2>
-      <h2 class="gradient-text2">Im programming since sep 2022</h2>
-      <h2 class="gradient-text2">C, C++, ASM, Haskell, Cuda</h2>
-      <h2 class="gradient-text2">definitely not html (yet)</h2>
-    </div>
-  </body>
-</html>
+
+<head>
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">TheMikerik.</a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">CV</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Caw,</h1>
+            <h1>I'm Michal Ručka</h1>
+            <h3>Student at VSB-FEI (Computer Sience)</h3>
+            <p> I am a 20-year-old college student studying computer science.
+                Since September 2022, I have been diving into the world of
+                programming, constantly expanding my skills and knowledge.
+                My passion lies in trading bots, machine learning, and
+                application development, as I am fascinated by their potential
+                to revolutionize various industries. With each passing day,
+                I am driven to explore and create innovative solutions that 
+                merge technology and real-world applications.</p>
+            <div class="btn-box">
+                <a href="#">More info</a>
+                <a href="#">Lets connect</a>
+            </div>
+        </div>
+    </section>
+
+</body>

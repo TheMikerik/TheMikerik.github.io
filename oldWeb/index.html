@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Crossroad</title>
+    <link rel="stylesheet" href="main-styles.css">
+    <script>
+      function handleClick(event) {
+        event.preventDefault();
+        var destinationURL = event.target.getAttribute('href');
+        window.location.href = destinationURL;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="logo-name flicker">
+      <img src="TheMikerik-5-12-2023.png" alt="logo" />
+    </div>
+    <div class="container-projects">
+      <h1 class="gradient-text">Just a playgound - testing random shi</h1>
+      <ul>
+        <li class="vibrate">
+          <a href="https://themikerik.github.io/fapi/index.html" onclick="handleClick(event)">Business Form for FAPI</a>
+        </li>
+        <li class="vibrate">
+          <a href="https://themikerik.github.io/test/index.html" onclick="handleClick(event)">Test Website</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container-info" >
+      <h1 class="gradient-text2">About me</h1>
+      <h2 class="gradient-text2">Im studying at VSB FEI</h2>
+      <h2 class="gradient-text2">Im programming since sep 2022</h2>
+      <h2 class="gradient-text2">C, C++, ASM, Haskell, Cuda</h2>
+      <h2 class="gradient-text2">definitely not html (yet)</h2>
+    </div>
+  </body>
+</html>
