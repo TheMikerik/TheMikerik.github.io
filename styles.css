@@ -285,7 +285,6 @@ body {
     width: 870px;
     height: 660px;
     background: transparent;
-    border: 2px solid red;
     transition: 1.5s;
 }
 
