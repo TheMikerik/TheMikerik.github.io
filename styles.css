@@ -101,7 +101,7 @@ body {
 }
 
 .btn-box a:hover {
-    color: #CAF0F8
+    color: #90E0EF
 }
 
 .btn-box a:nth-child(2) {
@@ -131,5 +131,68 @@ body {
 }
 
 .btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-icons {
+    position: absolute;
+    bottom:  40px;
+    width: 345px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-icons a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #90E0EF;
+    border: 2px solid #90E0EF;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #02022e;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+.home-icons a:hover {
+    color: #90E0EF;
+}
+/*
+.home-icons a:nth-child(2),
+.home-icons a:nth-child(4) {
+    background: #02022e;
+    color: #90E0EF;
+}
+
+.home-icons a:nth-child(2):hover,
+.home-icons a:nth-child(4):hover {
+    color: #02022e;
+}
+
+.home-icons a:nth-child(2)::before,
+.home-icons a:nth-child(4)::before {
+    background: #90E0EF;
+}
+*/
+.home-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #02022e;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-icons a:hover::before {
     width: 100%;
 }
