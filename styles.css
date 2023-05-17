@@ -359,7 +359,7 @@ body {
     background-position: center center;
 }
 .content:nth-child(2){
-    background: url(/main-files/SlotMachine.jpg) no-repeat;
+    background: url(/main-files/SlotMachine.png) no-repeat;
     background-size: cover;
     background-position: center center;
 }
