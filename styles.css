@@ -17,7 +17,8 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: transparent;
+    border-radius: 0 0 15% 15%;
+    background-color: #02022e;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +60,7 @@ body {
 }
 
 .home {
-    height: 100vh;
+    height: 110vh;
     background: url(rem1.png) no-repeat;
     background-position: calc(100% - 50px);
     background-size: 45%;
@@ -310,4 +311,91 @@ body {
     100% {
         width: 0;
     }
+}
+
+
+.portfolio {
+    position: relative;
+    top: 30px;
+    height: 230vh;
+    background: #CAF0F8;
+    background-size: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:normal;
+    padding: 0 10%;
+}
+
+.portfolio h1 {
+    position: relative;
+    font-size: 52px;
+    font-weight: 700;
+    color: #02022e;
+    margin-top: 200px;
+}
+
+.portfolio .content {
+    position: relative;
+    display: flex;
+    background: transparent;
+    height: 550px;
+    width: 400px;
+    border: 2px solid red;
+  }
+
+.content:nth-child(n) {
+    position:absolute;
+}
+
+.content:nth-child(1),
+.content:nth-child(2),
+.content:nth-child(3) {
+    top: 350px;
+}
+.content:nth-child(4),
+.content:nth-child(5),
+.content:nth-child(6) {
+    top: 1000px;
+}
+.content:nth-child(7),
+.content:nth-child(8),
+.content:nth-child(9) {
+    top: 1650px;
+}
+
+.content:nth-child(3n-2) {
+    left: 10%;
+}
+.content:nth-child(3n-1) {
+    left: 38%;
+}
+.content:nth-child(3n) {
+    left: 66%;
+}
+
+.portfolio .fill {
+    background-color: #90E0EF;
+}
+
+
+
+
+.CV {
+    position: relative;
+    top: 30px;
+    height: 230vh;
+    background: #02022e;
+    background-size: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:normal;
+    padding: 0 10%;
+}
+
+.CV h1 {
+    position: relative;
+    font-size: 52px;
+    font-weight: 700;
+    color: #CAF0F8;
+    margin-top: 200px;
 }
