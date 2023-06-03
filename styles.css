@@ -380,6 +380,11 @@ body {
     background-size: cover;
     background-position: center center;
 }
+.content:nth-child(4){
+    background: url(/main-files/trade-candles.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 /*---------------------------------EACH BOXES*/
 
 /*---------------------------------HOVER ANIMATION*/
