@@ -371,17 +371,12 @@ body {
     background-position: center center;
 }
 .content:nth-child(2){
-    background: url(/main-files/SlotMachine.png) no-repeat;
+    background: url(/main-files/atr.png) no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .content:nth-child(3){
-    background: url(/main-files/FAPI.png) no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-.content:nth-child(4){
-    background: url(/main-files/trade-candles.jpg) no-repeat;
+    background: url(/main-files/manip.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
 }
