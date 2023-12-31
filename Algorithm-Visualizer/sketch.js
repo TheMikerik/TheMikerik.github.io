@@ -4,6 +4,15 @@ var g_size = 25;
 
 var grid = new Array(rows);
 
+const Colors = {
+    BACKGROUND: [0],
+    TRANSPARENT: [255],
+    OBSTACLE: [0],
+    UNCHECKED: [72, 202, 228],
+    CHECKED: [0, 119, 182],
+    PATH: [3, 4, 94],
+}
+
 
 var unchecked = [];
 var checked = [];
@@ -123,7 +132,7 @@ function stopAlgorithm() {
 
 function clearObstacles() {
     for (var i = 0; i < obstacle.length; i++) {
-        obstacle[i].show(255);
+        obstacle[i].show(Colors.OBSTACLE);
     }
     var tmp = [];
     obstacle = tmp;
@@ -195,18 +204,18 @@ function draw() {
 
     for (var i = 0; i < rows; i++) {
         for (var j = 0; j < cols; j++) {
-            grid[i][j].show(255);
+            grid[i][j].show(Colors.TRANSPARENT);
         }
     }
 
     for (var i = 0; i < checked.length; i++) {
-        checked[i].show(color(255, 0, 0));
+        checked[i].show(Colors.CHECKED);
     }
     for (var i = 0; i < unchecked.length; i++) {
-        unchecked[i].show(color(0, 255, 0));
+        unchecked[i].show(Colors.UNCHECKED);
     }
     for (var i = 0; i < obstacle.length; i++) {
-        obstacle[i].show(0);
+        obstacle[i].show(Colors.OBSTACLE);
     }
 
     path = [];
@@ -218,7 +227,7 @@ function draw() {
     }
 
     for (var i = 0; i < path.length; i++) {
-        path[i].show(color(0, 0, 255));
+        path[i].show(Colors.PATH);
     }
 }
 
@@ -232,7 +241,7 @@ function mouseDragged() {
         var i = floor(mouseY / g_size);
         var j = floor(mouseX / g_size);
         if (i >= 0 && i < rows && j >= 0 && j < cols) {
-            grid[i][j].show(color(0))
+            grid[i][j].show(Colors.OBSTACLE)
             obstacle.push(grid[i][j]);
         }
     }
