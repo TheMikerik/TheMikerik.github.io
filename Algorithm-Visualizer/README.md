@@ -7,3 +7,5 @@ Explore the Algorithm Visualizer live on [this website](https://themikerik.githu
 ### Algorithms
 Here is the list of the algorithms that are currently available
 - A*
+- BFS (working on)
+- DFS (working on)
