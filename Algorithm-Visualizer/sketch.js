@@ -1,3 +1,5 @@
+import {startAlgorithm, stopAlgorithm, clearObstacles, clearGrid} from "src/buttons.js";
+
 var rows = 30;
 var cols = 60;
 var g_size = 25;
