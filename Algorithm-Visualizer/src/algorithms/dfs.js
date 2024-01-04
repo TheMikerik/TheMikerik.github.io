@@ -1,6 +1,6 @@
-var rows = 30;
-var cols = 60;
-var g_size = 25;
+var rows = 15;
+var cols = 30;
+var g_size = 50;
 
 var grid = new Array(rows);
 
@@ -109,37 +109,6 @@ function setup() {
     undoBtn.mousePressed(clearGrid);
 
     console.log(grid);
-}
-
-
-function startAlgorithm() {
-    blocks = [];
-    drawingObstacle = false;
-    queue.push(start);
-    loop();
-    running = true;
-}
-
-function stopAlgorithm() {
-    if ( running ) {
-        noLoop();
-        running = false;
-    }
-    else {
-        loop();
-        running = true;
-    }
-}
-
-function clearObstacles() {
-    blocks = [];
-}
-
-function clearGrid() {
-    blocks = [];
-    drawingObstacle = false;
-    loop();
-    noLoop();
 }
 
 function paintGrid(){
