@@ -1,5 +1,4 @@
 function startAlgorithm() {
-    blocks = [];
     drawingObstacle = false;
     queue.push(start);
     loop();
@@ -18,12 +17,28 @@ function stopAlgorithm() {
 }
 
 function clearObstacles() {
-    blocks = [];
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < cols; j++) {
+            if(grid[i][j].color === Colors.INQUEUE) {
+                grid[i][j].color = Colors.OBSTACLE;
+                grid[i][j].status = Status.BARRIER;
+                grid[i][j].show();
+
+            }
+        }
+    }
 }
 
 function clearGrid() {
-    blocks = [];
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < cols; j++) {
+            grid[i][j].color = Colors.TRANSPARENT
+            grid[i][j].status = Status.UNVISITED
+        }
+    }
+
     drawingObstacle = false;
+    queue.push(start);
     loop();
-    noLoop();
+    running = true;
 }

@@ -4,7 +4,6 @@ var g_size = 50;
 
 var grid = new Array(rows);
 
-var blocks = []
 var start;
 var end;
 var drawingObstacle = false;
@@ -49,12 +48,12 @@ function setup() {
     undoBtn = createButton('Undo');
     undoBtn.position(width + 50, 188);
     undoBtn.size(100, 50)
-    undoBtn.mousePressed(clearObstacles);
+    undoBtn.mousePressed( () => clearObstacles(grid, rows, cols) );
 
-    undoBtn = createButton('Restart');
-    undoBtn.position(width + 50, 268);
-    undoBtn.size(100, 50)
-    undoBtn.mousePressed(clearGrid);
+    rstrtBtn = createButton('Restart');
+    rstrtBtn.position(width + 50, 268);
+    rstrtBtn.size(100, 50)
+    rstrtBtn.mousePressed( () => clearGrid() );
 
     console.log(grid);
 }
