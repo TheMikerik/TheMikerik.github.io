@@ -14,7 +14,7 @@ function setup() {
     createCanvas(cols * g_size + 1, rows * g_size + 1);
     console.log("DFS");
 
-    // frameRate(100);
+    frameRate(40);
 
     for (var i = 0; i < rows; i++) {
         grid[i] = new Array(cols);
@@ -33,7 +33,7 @@ function setup() {
     }
 
     start = grid[0][0];
-    //end = grid[rows - 1][cols - 1];
+    end = grid[rows - 1][cols - 1];
 
     startBtn = createButton('Start');
     startBtn.position(width + 50, 28);
@@ -58,7 +58,7 @@ function setup() {
     console.log(grid);
 }
 
-function paintGrid(){
+function printGrid(){
     for (var i = 0; i < rows; i++) {
         for (var j = 0; j < cols; j++) {
             grid[i][j].show();
@@ -94,7 +94,7 @@ function draw() {
 
         for(i=0; i<current.neighbors.length; i++) {
             var neighbor = current.neighbors[i];
-            if( neighbor.status === Status.UNVISITED){
+            if(neighbor.status === Status.UNVISITED){
                 queue.push(neighbor);
                 neighbor.status = Status.PROCESSING;
                 neighbor.color = Colors.INQUEUE;
@@ -104,7 +104,7 @@ function draw() {
 
     background(0);
 
-    paintGrid();
+    printGrid();
 
     //save path
 }

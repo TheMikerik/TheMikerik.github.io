@@ -19,26 +19,25 @@ function stopAlgorithm() {
 function clearObstacles() {
     for (var i = 0; i < rows; i++) {
         for (var j = 0; j < cols; j++) {
-            if(grid[i][j].color === Colors.INQUEUE) {
-                grid[i][j].color = Colors.OBSTACLE;
-                grid[i][j].status = Status.BARRIER;
+            if(grid[i][j].status === Status.BARRIER) {
+                grid[i][j].color = Colors.TRANSPARENT;
+                grid[i][j].status = Status.UNVISITED;
                 grid[i][j].show();
-
             }
         }
     }
 }
 
 function clearGrid() {
-    for (var i = 0; i < rows; i++) {
-        for (var j = 0; j < cols; j++) {
-            grid[i][j].color = Colors.TRANSPARENT
-            grid[i][j].status = Status.UNVISITED
-        }
-    }
-
     drawingObstacle = false;
     queue.push(start);
-    loop();
-    running = true;
+    running = false;
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < cols; j++) {
+            grid[i][j].color = Colors.TRANSPARENT;
+            grid[i][j].status = Status.UNVISITED;
+            grid[i][j].show();
+        }
+    }
+    noLoop();
 }
