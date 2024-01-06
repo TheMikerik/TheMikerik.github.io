@@ -1,6 +1,6 @@
-var rows = 15;
-var cols = 30;
-var g_size = 50;
+var rows = 30;
+var cols = 60;
+var g_size = 25;
 
 var grid = new Array(rows);
 
@@ -14,7 +14,7 @@ function setup() {
     // Create the canvas within the canvas-container div
     var canvas = createCanvas(cols * g_size + 1, rows * g_size + 1);
 
-    frameRate(40);
+    // frameRate(40);
 
     for (var i = 0; i < rows; i++) {
         grid[i] = new Array(cols);
@@ -86,7 +86,7 @@ function draw() {
     }
 
     if (queue.length !== 0) {
-        var current = queue.pop();
+        var current = queue.pop();   // shift for bfs
         current.status = Status.VISITED;
         current.color = Colors.CHECKED;
 
