@@ -11,8 +11,8 @@ var running = false;
 var queue = []
 
 function setup() {
-    createCanvas(cols * g_size + 1, rows * g_size + 1);
-    console.log("DFS");
+    // Create the canvas within the canvas-container div
+    var canvas = createCanvas(cols * g_size + 1, rows * g_size + 1);
 
     frameRate(40);
 
@@ -35,28 +35,31 @@ function setup() {
     start = grid[0][0];
     end = grid[rows - 1][cols - 1];
 
+    canvas.parent('canvas-container');
+
     startBtn = createButton('Start');
-    startBtn.position(width + 50, 28);
     startBtn.size(100, 50)
     startBtn.mousePressed(startAlgorithm);
+    startBtn.parent('buttons-container');
 
     stopBtn = createButton('Stop');
-    stopBtn.position(width + 50, 108);
     stopBtn.size(100, 50)
     stopBtn.mousePressed(stopAlgorithm);
+    stopBtn.parent('buttons-container');
 
     undoBtn = createButton('Undo');
-    undoBtn.position(width + 50, 188);
     undoBtn.size(100, 50)
-    undoBtn.mousePressed( () => clearObstacles(grid, rows, cols) );
+    undoBtn.mousePressed(() => clearObstacles(grid, rows, cols));
+    undoBtn.parent('buttons-container');
 
     rstrtBtn = createButton('Restart');
-    rstrtBtn.position(width + 50, 268);
     rstrtBtn.size(100, 50)
-    rstrtBtn.mousePressed( () => clearGrid() );
+    rstrtBtn.mousePressed(() => clearGrid());
+    rstrtBtn.parent('buttons-container');
 
     console.log(grid);
 }
+
 
 function printGrid(){
     for (var i = 0; i < rows; i++) {

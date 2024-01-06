@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
 }
 
@@ -8,10 +8,12 @@ header {
     background-color: #333;
     color: white;
     padding: 10px;
+    font-size: 20px;
 }
 
 nav {
     background-color: #444;
+    font-size: 20px;
 }
 
 nav ul {
@@ -39,7 +41,8 @@ nav a:hover {
 }
 
 main {
-    margin: 20px 0;
+    margin: 50px 0;
+    margin-bottom: 100px;
 }
 
 footer {
@@ -50,6 +53,40 @@ footer {
 }
 
 .canvas-container {
-    position: relative;
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    gap: 100px;
+}
+
+.description-container {
+    max-width: 1445px;
+    margin: 80px auto 0;
+    padding: 30px;
+    background-color: #ecebeb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.description-item {
+    margin-bottom: 70px;
+}
+
+.description-container h1 {
+    font-size: 40px;
+}
+
+.description-item h2 {
+    font-size: 30px;
+}
+
+.description-item p {
+    font-size: 25px;
 }
