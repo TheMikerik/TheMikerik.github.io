@@ -13,7 +13,7 @@ function Spot(i, j) {
         fill(this.color);
         noStroke(0);
         
-        rect(this.x * g_size + 1, this.y * g_size + 1, g_size - 1, g_size - 1);
+        rect(this.x * tile + 1, this.y * tile + 1, tile - 1, tile - 1);
     };
 
     this.addNeighbor = function (grid) {
