@@ -9,3 +9,7 @@ Here is the list of the algorithms that are currently available
 - A*
 - BFS (working on)
 - DFS (working on)
+
+### To Do
+- Step button
+- Speed button
