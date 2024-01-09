@@ -56,21 +56,7 @@ function draw() {
 
     background(0);
 
-    for (var i = 0; i < rows; i++) {
-        for (var j = 0; j < cols; j++) {
-            grid[i][j].show(Colors.TRANSPARENT);
-        }
-    }
-
-    for (var i = 0; i < checked.length; i++) {
-        checked[i].show(Colors.CHECKED);
-    }
-    for (var i = 0; i < unchecked.length; i++) {
-        unchecked[i].show(Colors.UNCHECKED);
-    }
-    for (var i = 0; i < obstacle.length; i++) {
-        obstacle[i].show(Colors.OBSTACLE);
-    }
+    printGrid();
 
     path = [];
     var temp = current;

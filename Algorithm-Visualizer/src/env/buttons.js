@@ -1,3 +1,35 @@
+function createButtons() {
+    startBtn = createButton('Start');
+    startBtn.size(100, 50)
+    startBtn.mousePressed(startAlgorithm);
+    startBtn.parent('buttons-container');
+
+    stopBtn = createButton('Stop');
+    stopBtn.size(100, 50)
+    stopBtn.mousePressed(stopAlgorithm);
+    stopBtn.parent('buttons-container');
+
+    undoBtn = createButton('Undo');
+    undoBtn.size(100, 50)
+    undoBtn.mousePressed(() => clearObstacles(grid, rows, cols));
+    undoBtn.parent('buttons-container');
+
+    rstrtBtn = createButton('Restart');
+    rstrtBtn.size(100, 50)
+    rstrtBtn.mousePressed(() => clearGrid());
+    rstrtBtn.parent('buttons-container');
+    
+    gridBtn = createButton('Change Grid');
+    gridBtn.size(100, 50)
+    gridBtn.mousePressed(() => changeGrid());
+    gridBtn.parent('buttons-container');
+
+    // algorithmButton = createButton('Switch Algorithm');
+    // algorithmButton.size(100, 50)
+    // algorithmButton.mousePressed(() => changeAlgorithm());
+    // algorithmButton.parent('buttons-container');
+}
+
 function startAlgorithm() {
     drawingObstacle = false;
     queue.push(start);
@@ -30,6 +62,9 @@ function clearObstacles() {
 
 function clearGrid() {
     drawingObstacle = false;
+    while (queue.length > 0) {
+        queue.pop();
+    }
     queue.push(start);
     running = false;
     for (var i = 0; i < rows; i++) {
@@ -74,31 +109,5 @@ function changeGrid() {
     }
 
     setup();
-}
-
-function createButtons() {
-    startBtn = createButton('Start');
-    startBtn.size(100, 50)
-    startBtn.mousePressed(startAlgorithm);
-    startBtn.parent('buttons-container');
-
-    stopBtn = createButton('Stop');
-    stopBtn.size(100, 50)
-    stopBtn.mousePressed(stopAlgorithm);
-    stopBtn.parent('buttons-container');
-
-    undoBtn = createButton('Undo');
-    undoBtn.size(100, 50)
-    undoBtn.mousePressed(() => clearObstacles(grid, rows, cols));
-    undoBtn.parent('buttons-container');
-
-    rstrtBtn = createButton('Restart');
-    rstrtBtn.size(100, 50)
-    rstrtBtn.mousePressed(() => clearGrid());
-    rstrtBtn.parent('buttons-container');
-    
-    gridBtn = createButton('Change Grid');
-    gridBtn.size(100, 50)
-    gridBtn.mousePressed(() => changeGrid());
-    gridBtn.parent('buttons-container');
+    loop();
 }

@@ -14,3 +14,9 @@ const Status = {
     BARRIER: 4,
     PATH: 5,
 }
+
+const Algo = {
+    DFS: 'dfs',
+    BFS: 'bfs',
+    A_star: 'a_star',
+}
