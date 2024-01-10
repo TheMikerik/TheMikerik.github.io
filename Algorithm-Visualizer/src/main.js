@@ -11,7 +11,7 @@ var created = false;
 function setup() {
     var canvas = createCanvas(cols * tile + 1, rows * tile + 1);
 
-    frameRate(5);
+    frameRate(fps);
 
     for (var i = 0; i < rows; i++) {
         grid[i] = new Array(cols);
