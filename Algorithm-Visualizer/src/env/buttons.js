@@ -61,20 +61,8 @@ function clearObstacles() {
 }
 
 function clearGrid() {
-    drawingObstacle = false;
-    while (queue.length > 0) {
-        queue.pop();
-    }
-    queue.push(start);
-    running = false;
-    for (var i = 0; i < rows; i++) {
-        for (var j = 0; j < cols; j++) {
-            grid[i][j].color = Colors.TRANSPARENT;
-            grid[i][j].status = Status.UNVISITED;
-            grid[i][j].show();
-        }
-    }
-    noLoop();
+    setup();
+    loop();
 }
 
 function changeGrid() {
