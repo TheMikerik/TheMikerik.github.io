@@ -98,3 +98,34 @@ footer {
 .description-item p {
     font-size: 25px;
 }
+
+#algorithm-list {
+    background-color: #444;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    left: 9.2%;
+    width: 132px;
+}
+
+#algorithm-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#algorithm-list li {
+    background-color: #444;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+#algorithm-list a {
+    color: white;
+    text-decoration: none;
+}
+
+#algorithm-list a:hover {
+    background-color: #ddd;
+    color: black;
+}
