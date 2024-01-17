@@ -1,7 +1,7 @@
 var rows;
 var cols;
 var tile;
-var fps = 10;
+var fps = 150;
 
 var pressedCounter = -1;
 var current_algo = Algo.DFS;
