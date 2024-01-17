@@ -61,20 +61,8 @@ function clearObstacles() {
 }
 
 function clearGrid() {
-    drawingObstacle = false;
-    while (queue.length > 0) {
-        queue.pop();
-    }
-    queue.push(start);
-    running = false;
-    for (var i = 0; i < rows; i++) {
-        for (var j = 0; j < cols; j++) {
-            grid[i][j].color = Colors.TRANSPARENT;
-            grid[i][j].status = Status.UNVISITED;
-            grid[i][j].show();
-        }
-    }
-    noLoop();
+    setup();
+    loop();
 }
 
 function changeGrid() {
@@ -86,25 +74,21 @@ function changeGrid() {
             rows = 28;
             cols = 60;
             tile = 24;
-            fps = 200;
             break;
         case 2:
             rows = 56;
             cols = 120;
             tile = 12;
-            fps = 200;
             break;
         case 3:
             rows = 7;
             cols = 15;
             tile = 96;
-            fps = 200;
             break;
         default:
             rows = 14;
             cols = 30;
             tile = 48;
-            fps = 200;
             break;
     }
 
