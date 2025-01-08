@@ -1,6 +1,16 @@
 const _MANIP_LOG_MAX = 11;
 const _BLOCK_SIZE = 100;
 
+import { TradingData } from './trading-data.js';
+
+const tradingData = new TradingData("btcusdt", "1s");
+tradingData.setKlineCloseCallback((data) => {
+    document.getElementById('openPrice').textContent = data.openPrice;
+    document.getElementById('closePrice').textContent = data.closePrice;
+    document.getElementById('highPrice').textContent = data.highPrice;
+    document.getElementById('lowPrice').textContent = data.lowPrice;
+});
+tradingData.start();
 
 var BINANCE_SOCKET = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@trade");
 /* Output of this web socket is following:
@@ -71,14 +81,8 @@ class Block{
         this.similarity = similar;
         this.manip_percentage = manip_percentage;
 
-        this.message = this.manip_percentage + 
-                    "% - Block " +
-                    this.id +
-                    " has " +
-                    this.similarity +
-                    "/" + 
-                    _BLOCK_SIZE +
-                    " potential manipulation attempts.";
+        this.message = "Block " + this.id + ": " + this.manip_percentage +
+                        "% (" + this.similarity + "/" + _BLOCK_SIZE + ") ";
     }
 }
 
